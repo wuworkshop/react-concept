@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, Grid, Typography } from "@material-ui/core";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Container style={{ height: "100vh" }}>
+			<Grid
+				container
+				spacing={2}
+				alignContent="center"
+				style={{ height: "100%" }}
+			>
+				<Grid item xs={12} sm={6}>
+					<Typography component="h1" variant="h5" gutterBottom>
+						CodeBuddies
+					</Typography>
+					<Typography component="h2" variant="h4" gutterBottom>
+						We're a global community of people helping each other become better
+						with software development through organized study-groups and virtual
+						hangouts.
+					</Typography>
+					<Typography variant="body1" gutterBottom>
+						Join the conversations - <a href="/">Sign Up</a>.
+					</Typography>
+				</Grid>
+				<Grid item xs={12} sm={6}></Grid>
+			</Grid>
+		</Container>
+	);
 }
 
 export default App;
