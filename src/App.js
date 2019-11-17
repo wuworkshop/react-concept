@@ -33,9 +33,10 @@ function App() {
           <Route path="/resources">
             <Resources />
           </Route>
-          <Route path="/submit-resource">
-            <SubmitResource />
-          </Route>
+          <Route
+            path="/submit-resource"
+            render={matchProps => <SubmitResource matchProps={matchProps} />}
+          />
           <Route path="/">
             <Home />
           </Route>
